@@ -1,4 +1,4 @@
-package com.example.aakash.augrealtaketwo;
+package com.example.aakash.augrealtaketwo.View;
 
 import android.content.Context;
 import android.hardware.Camera;
@@ -15,17 +15,18 @@ public class ShowCamera extends SurfaceView implements SurfaceHolder.Callback {
     private SurfaceHolder surfaceHolder;
     private Camera camera;
 
-    public ShowCamera(Context context,Camera camera) {
+    public ShowCamera(Context context, Camera camera) {
         super(context);
         this.camera = camera;
         surfaceHolder = getHolder();
         surfaceHolder.addCallback(this);
         surfaceHolder.setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
     }
+
     @Override
     public void surfaceCreated(SurfaceHolder holder) {
         // The Surface has been created, now tell the camera where to draw the preview.
-        if(camera == null) return;
+        if (camera == null) return;
         try {
             camera.setPreviewDisplay(holder);
             camera.startPreview();
@@ -34,7 +35,8 @@ public class ShowCamera extends SurfaceView implements SurfaceHolder.Callback {
         }
     }
 
-    boolean mIsPreviewRunning=false;
+    boolean mIsPreviewRunning = false;
+
     @Override
     public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
         if (holder.getSurface() == null) {
@@ -62,6 +64,7 @@ public class ShowCamera extends SurfaceView implements SurfaceHolder.Callback {
             Log.d("error", "Error starting camera preview: " + e.getMessage());
         }
     }
+
     @Override
     public void surfaceDestroyed(SurfaceHolder holder) {
         // empty. Take care of releasing the Camera preview in your activity.

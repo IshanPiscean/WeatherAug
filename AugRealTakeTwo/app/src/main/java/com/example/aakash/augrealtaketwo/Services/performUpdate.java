@@ -1,6 +1,9 @@
-package com.example.aakash.augrealtaketwo;
+package com.example.aakash.augrealtaketwo.Services;
 
 import android.os.AsyncTask;
+
+import com.example.aakash.augrealtaketwo.View.MainActivity;
+import com.example.aakash.augrealtaketwo.R;
 
 /**
  * Created by Aakash on 6/22/2015.

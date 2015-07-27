@@ -83,12 +83,26 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:adjustViewBounds="true"
-            android:scaleType="centerCrop"
             android:id="@+id/temperaturePic"
+            android:scaleType="centerInside"
             android:layout_below="@id/updated_field"
             android:layout_centerHorizontal="true"
             android:layout_centerVertical="true"
             android:layout_above="@+id/weather_icon" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton"
+            android:src="@drawable/nearby"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:layout_toLeftOf="@+id/weather_icon"
+            android:layout_toStartOf="@+id/weather_icon"
+            android:layout_above="@+id/temperaturePic" />
+
 
     </RelativeLayout>
 </LinearLayout>

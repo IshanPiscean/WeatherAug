@@ -1,12 +1,17 @@
-package com.example.aakash.augrealtaketwo;
+package com.example.aakash.augrealtaketwo.Services;
 
+import android.content.Intent;
 import android.hardware.Camera;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
+
+import com.example.aakash.augrealtaketwo.View.MainActivity;
+import com.example.aakash.augrealtaketwo.R;
 
 /**
  * Created by Aakash on 6/22/2015.
@@ -35,6 +40,7 @@ public class PrepareInitialScreenUtil {
         MainActivity.updated_field = (TextView) view.findViewById(R.id.updated_field);
         MainActivity.weather_icon = (TextView) view.findViewById(R.id.weather_icon);
         MainActivity.seekBar = (SeekBar) view.findViewById(R.id.seekBar);
+        MainActivity.nearByButton = (ImageButton) view.findViewById(R.id.imageButton);
         MainActivity.temperaturePic = (ImageView) view.findViewById(R.id.temperaturePic);
         MainActivity.seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             int distanceFromLocation = 0;
@@ -57,6 +63,9 @@ public class PrepareInitialScreenUtil {
                 new performUpdate().execute(params);
             }
         });
+
+
+
 
         MainActivity.temperature.addTextChangedListener(new TextWatcher() {
             @Override
