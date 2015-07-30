@@ -10,7 +10,7 @@ import com.example.aakash.augrealtaketwo.R;
  */
 public class performUpdate extends AsyncTask<Integer, Integer, String[]>
 {
-
+//TODO: Async task not required here. Might be a good option to implement seekbar inside main activity.
     @Override
     protected String[] doInBackground(Integer... params) {
         String[] updateView = new String[10];
@@ -27,7 +27,7 @@ public class performUpdate extends AsyncTask<Integer, Integer, String[]>
     @Override
     protected void onPostExecute(String[] strings) {
         MainActivity.temperature.setText(strings[0]);
-        MainActivity.weather_icon.setText(strings[1]);
+        MainActivity.weather_description.setText(strings[1]);
         MainActivity.city_field.setText(strings[3]);
         MainActivity.updated_field.setText(strings[4]);
         MainActivity.temperaturePic.setImageResource(R.drawable.sunnywithclouds);

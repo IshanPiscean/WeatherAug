@@ -20,19 +20,76 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:text="Ottawa"
             android:textColor="#ff0a18ff"
             android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/weather_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="40sp"
+            android:textColor="#ff1e0bff"
+            android:focusable="true"
+            android:singleLine="false" />
+
+        <TextView
+            android:id="@+id/current_temperature_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/details_field"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/weather_icon"
+            android:layout_centerHorizontal="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            />
+
+        <ImageView
+            android:id="@+id/temperaturePic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:layout_below="@id/city_field"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            />
 
         <TextView
             android:id="@+id/updated_field"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/city_field"
-            android:layout_centerHorizontal="true"
-            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textAppearance="?android:attr/textAppearanceSmall"
             android:textSize="20sp"
-            android:text="24th May 2015" />
+            android:textColor="#ff0a18ff"
+            android:layout_below="@+id/details_field"
+            />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <!--<TextView-->
+            <!--android:id="@+id/updated_field"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/city_field"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+            <!--android:textSize="20sp"-->
+            <!--android:text="24th May 2015" />-->
 
         <TextView
             android:id="@+id/weather_icon"
@@ -42,66 +99,65 @@
             android:layout_centerHorizontal="true"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textSize="70sp"
-            android:text="Cloudy"
             android:textColor="#ff1e0bff"
             android:focusable="true"
             android:singleLine="false" />
 
-        <TextView
-            android:id="@+id/current_temperature_field"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textSize="55sp"
-            android:layout_below="@+id/details_field"
-            android:text="25"
-            android:textColor="#ff0a11ff"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp" />
+        <!--<TextView-->
+            <!--android:id="@+id/current_temperature_field"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textAppearance="?android:attr/textAppearanceLarge"-->
+            <!--android:textSize="55sp"-->
+            <!--android:layout_below="@+id/details_field"-->
+            <!--android:text="25"-->
+            <!--android:textColor="#ff0a11ff"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_marginTop="10dp" />-->
 
-        <TextView
-            android:id="@+id/details_field"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/weather_icon"
-            android:layout_centerHorizontal="true"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:text="about to rain" />
+        <!--<TextView-->
+            <!--android:id="@+id/details_field"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_below="@+id/weather_icon"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:textAppearance="?android:attr/textAppearanceMedium"-->
+            <!--android:text="about to rain" />-->
 
-        <SeekBar
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/seekBar"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:adjustViewBounds="true"
-            android:id="@+id/temperaturePic"
-            android:scaleType="centerInside"
-            android:layout_below="@id/updated_field"
-            android:layout_centerHorizontal="true"
-            android:layout_centerVertical="true"
-            android:layout_above="@+id/weather_icon" />
+        <!--<ImageView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:adjustViewBounds="true"-->
+            <!--android:id="@+id/temperaturePic"-->
+            <!--android:scaleType="centerInside"-->
+            <!--android:layout_below="@id/updated_field"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_above="@+id/weather_icon" />-->
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/imageButton"
             android:src="@drawable/nearby"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
             android:adjustViewBounds="true"
             android:scaleType="centerInside"
-            android:layout_toLeftOf="@+id/weather_icon"
-            android:layout_toStartOf="@+id/weather_icon"
-            android:layout_above="@+id/temperaturePic" />
+            android:layout_alignBottom="@+id/weather_icon"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_toStartOf="@+id/weather_description"
+            android:layout_alignTop="@+id/weather_icon" />
+
+        <Button
+            android:text="Get Weather"
+            android:id="@+id/weather_buttonId"
+            android:onClick="getWeather"
+            android:layout_width="196dp"
+            android:layout_height="59dp"
+            android:layout_alignTop="@+id/details_field"
+            android:layout_toRightOf="@+id/details_field"
+            android:layout_toEndOf="@+id/details_field" />
 
 
     </RelativeLayout>

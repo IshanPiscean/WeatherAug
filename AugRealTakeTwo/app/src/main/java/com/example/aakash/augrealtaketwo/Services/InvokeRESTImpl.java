@@ -111,6 +111,8 @@ public class InvokeRESTImpl extends AsyncTask<String,Integer,String> {
         else if(thisCallFor.equalsIgnoreCase(InvokeRESTImpl.WEATHER_INFO))
         {
             //Call to weather API to be implemented here
+
+
         }
 
     }
