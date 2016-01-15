@@ -22,7 +22,7 @@ import java.net.URL;
  */
 public class WeatherInfo {
     // Final request :api.openweathermap.org/data/2.5/weather?lat=35&lon=139
-    private static final String WEATHER_API_URL = "http://api.openweathermap.org/data/2.5/weather?lat=%s&lon=%s";
+    private static final String WEATHER_API_URL = "http://api.openweathermap.org/data/2.5/weather?lat=%s&lon=%s&appid=bd91203cfb4a2e3e7aa532a9f12651f5";
     // Final image icon request: http://openweathermap.org/img/w/10d.png
     private static final String WEATHER_ICON_URL = "http://openweathermap.org/img/w/";
 
